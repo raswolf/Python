@@ -12,9 +12,9 @@ from module3.format_output.average_scores import average
 
 
 class FunctionTestCase(unittest.TestCase):
-    """Tests operation with user input _____"""
+    """Tests operation with user input 70, 82, 67"""
     def test_average(self):
-        self.assertEqual(average(), 60)
+        self.assertEqual(average(), 73)
 
 
 if __name__ == '__main__':
