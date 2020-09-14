@@ -14,9 +14,9 @@ def main():
     index = input('Which set to run? (1-5)')
     if index == '1':
         print('capitalize: ' + movie_role.capitalize())
-        print('find: ' + str(movie_role.find('ss')))
+        print('find "ss": ' + str(movie_role.find('ss')))
     if index == '2':
-        print('index: ' + str(movie_role.index('ley')))
+        print('index "ley": ' + str(movie_role.index('ley')))
         print('isalnum: ' + str(movie_role.isalnum()))
     if index == '3':
         print('isalpha: ' + str(movie_role.isalpha()))
@@ -26,7 +26,7 @@ def main():
         print('isupper: ' + str(movie_role.isupper()))
     if index == '5':
         print('isspace: ' + str(movie_role.isspace()))
-        print('startswith: ' + str(movie_role.startswith('not')))
+        print('startswith "not": ' + str(movie_role.startswith('not')))
 
 
 if __name__ == '__main__':

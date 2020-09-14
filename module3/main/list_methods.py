@@ -15,21 +15,28 @@ print(listOne)
 def main():
     index = input('Which set to run? (1-5)')
     if index == '1':
-        print(listOne.append('Ralph'))
-        print(listOne.clear())
+        listOne.append('Ralph')
+        print('Append "Ralph": ' + str(listOne))
+        listOne.clear()
+        print('Clear: ' + str(listOne))
     if index == '2':
-        print(listOne.copy())
-        print(listOne.count('Gift'))
+        print('Copy: ' + str(listOne.copy()))
+        print('Count "Gift": ' + str(listOne.count('Gift')))
     if index == '3':
-        print(listOne.extend(listTwo))
-        print(listOne.index('Zorro'))
-        print(listOne.index('Percy'))
+        listOne.extend(listTwo)
+        print('Extend with ' + str(listTwo) + ': ' + str(listOne))
+        print('Index "Zorro": ' + str(listOne.index('Zorro')))
+        print('Index "Percy": ' + str(listOne.index('Percy')))
     if index == '4':
-        print(listOne.insert(3, 'Tinker'))
-        print(listOne.remove('Tinker'))
+        listOne.insert(3, 'Tinker')
+        print('Insert "Tinker" at 3: ' + str(listOne))
+        listOne.remove('Tinker')
+        print('Remove "Tinker": ' + str(listOne))
     if index == '5':
-        print(listOne.reverse())
-        print(listOne.sort())
+        listOne.reverse()
+        print('Reverse: ' + str(listOne))
+        listOne.sort()
+        print('Sort: ' + str(listOne))
 
 
 if __name__ == '__main__':
