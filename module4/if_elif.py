@@ -1,5 +1,5 @@
 """
-Program: string_methods.py
+Program: if_elif.py
 Author: Rachael Wolf
 Last date modified: 09/21/2020
 
