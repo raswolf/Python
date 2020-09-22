@@ -18,3 +18,7 @@ class FunctionTestCase(unittest.TestCase):
     def test_average_exception_second_score(self):
         with self.assertRaises(ValueError):
             average(90, - 89, 78)
+
+    def test_average_exception_third_score(self):
+        with self.assertRaises(ValueError):
+            average(90, 89, -78)
