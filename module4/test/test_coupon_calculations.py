@@ -15,15 +15,15 @@ class FunctionTestCase(unittest.TestCase):
     """Tests operation with user input price = 10, cash_coupon = 5, percent_coupon = 10
     Shipping will be $5.95, tax is 6%"""
     def test1_set1(self):
-        self.assertAlmostEqual(calculate_order(10, 5, 10), 10.75, places=4)
+        self.assertAlmostEqual(calculate_order(10, 5, 10), 11.05, places=4)
 
     """Tests operation with user input 10, 5, 15"""
     def test2_set1(self):
-        self.assertAlmostEqual(calculate_order(10, 5, 15), 10.50, places=4)
+        self.assertAlmostEqual(calculate_order(10, 5, 15), 10.8, places=4)
 
     """Tests operation with user input 10, 5, 20 """
     def test3_set1(self):
-        self.assertAlmostEqual(calculate_order(10, 5, 20), 10.25, places=4)
+        self.assertAlmostEqual(calculate_order(10, 5, 20), 10.55, places=4)
 
     """Tests operation with user input 10, 10, 10 """
     def test4_set1(self):
