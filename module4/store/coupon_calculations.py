@@ -23,15 +23,5 @@ def calculate_order(price, cash_coupon, percent_coupon):
     payment -= payment * (percent_coupon/100)
     return max(payment, 0) + tax + shipping
 
-
-def main():
-    print('thing 1')
-    print('thing 2')
-    level = input('doo doo dooo')
-    if level:
-        print('beep')
-    print('stuff')
-
-
-if __name__ == '__main__':
-    main()
+# this is actually cleaner and easier without nested ifs?
+# the only thing that really changes is the shipping
