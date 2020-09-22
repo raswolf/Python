@@ -12,21 +12,30 @@ from module4.store.coupon_calculations import calculate_order
 
 
 class FunctionTestCase(unittest.TestCase):
-    """Tests operation with user input price = 40, cash_coupon = 5, percent_coupon = 20"""
-    def test1_calculate(self):
-        self.assertAlmostEqual(calculate_order(40, 5, 20), 28, places=4)
+    """Tests operation with user input price = 10, cash_coupon = 5, percent_coupon = 10
+    Shipping will be $5.95, tax is 6%"""
+    def test1_set1(self):
+        self.assertAlmostEqual(calculate_order(10, 5, 10), 10.75, places=4)
 
-    """Tests operation with user input 50, 0, 15"""
-    def test2_calculate(self):
-        self.assertAlmostEqual(calculate_order(50, 0, 15), 42.5, places=4)
+    """Tests operation with user input 10, 5, 15"""
+    def test2_set1(self):
+        self.assertAlmostEqual(calculate_order(10, 5, 15), 10.50, places=4)
 
-    """Tests operation with user input 15, 20, 10 (no instructions were given to prevent this)"""
-    def test3_super_cash(self):
-        self.assertAlmostEqual(calculate_order(15, 20, 10), -0.5, places=4)
+    """Tests operation with user input 10, 5, 20 """
+    def test3_set1(self):
+        self.assertAlmostEqual(calculate_order(10, 5, 20), 10.25, places=4)
 
-    """Tests operation with user input 40, 5, 110 (no instructions were given to prevent this)"""
-    def test4_super_percent(self):
-        self.assertAlmostEqual(calculate_order(40, 5, 110), -3.5, places=4)
+    """Tests operation with user input 10, 10, 10 """
+    def test4_set1(self):
+        self.assertAlmostEqual(calculate_order(10, 10, 10), 6.55, places=4)
+
+    """Tests operation with user input 10, 10, 15 """
+    def test5_set1(self):
+        self.assertAlmostEqual(calculate_order(10, 10, 15), 6.55, places=4)
+
+    """Tests operation with user input 10, 10, 20 """
+    def test6_set1(self):
+        self.assertAlmostEqual(calculate_order(10, 10, 20), 6.55, places=4)
 
 
 if __name__ == '__main__':
