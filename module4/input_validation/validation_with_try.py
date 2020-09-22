@@ -23,9 +23,13 @@ def main():
     score1 = input('first score: ')
     score2 = input('second score: ')
     score3 = input('third score: ')
-    average_scores = average(score1, score2, score3)
-    print(last_name + ', ' + first_name + ': age ' + age, end=',')
-    print(' average grade: {0:.2f}'.format(average_scores))
+    try:
+        average_scores = average(score1, score2, score3)
+    except:
+        print('one or more entered scores was negative')
+    else:
+        print(last_name + ', ' + first_name + ': age ' + age, end=',')
+        print(' average grade: {0:.2f}'.format(average_scores))
 
 
 if __name__ == '__main__':
