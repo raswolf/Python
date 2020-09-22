@@ -12,30 +12,30 @@ from module4.store.coupon_calculations import calculate_order
 
 
 class FunctionTestCase(unittest.TestCase):
-    """Tests operation with user input price = 10, cash_coupon = 5, percent_coupon = 10
+    """Tests operation with user input price = 8, cash_coupon = 5, percent_coupon = 10
     Shipping will be $5.95, tax is 6%"""
     def test1_set1(self):
-        self.assertAlmostEqual(calculate_order(10, 5, 10), 11.05, places=4)
+        self.assertAlmostEqual(calculate_order(8, 5, 10), 9.13, places=4)
 
-    """Tests operation with user input 10, 5, 15"""
+    """Tests operation with user input 8, 5, 15"""
     def test2_set1(self):
-        self.assertAlmostEqual(calculate_order(10, 5, 15), 10.8, places=4)
+        self.assertAlmostEqual(calculate_order(8, 5, 15), 8.98, places=4)
 
-    """Tests operation with user input 10, 5, 20 """
+    """Tests operation with user input 8, 5, 20 """
     def test3_set1(self):
-        self.assertAlmostEqual(calculate_order(10, 5, 20), 10.55, places=4)
+        self.assertAlmostEqual(calculate_order(8, 5, 20), 8.83, places=4)
 
-    """Tests operation with user input 10, 10, 10 """
+    """Tests operation with user input 8, 10, 10 """
     def test4_set1(self):
-        self.assertAlmostEqual(calculate_order(10, 10, 10), 6.55, places=4)
+        self.assertAlmostEqual(calculate_order(8, 10, 10), 6.43, places=4)
 
-    """Tests operation with user input 10, 10, 15 """
+    """Tests operation with user input 8, 10, 15 """
     def test5_set1(self):
-        self.assertAlmostEqual(calculate_order(10, 10, 15), 6.55, places=4)
+        self.assertAlmostEqual(calculate_order(8, 10, 15), 6.43, places=4)
 
-    """Tests operation with user input 10, 10, 20 """
+    """Tests operation with user input 8, 10, 20 """
     def test6_set1(self):
-        self.assertAlmostEqual(calculate_order(10, 10, 20), 6.55, places=4)
+        self.assertAlmostEqual(calculate_order(8, 10, 20), 6.43, places=4)
 
     """Tests operation with user input price = 20, cash_coupon = 5, percent_coupon = 10
     Shipping will be $7.95, tax is 6%"""

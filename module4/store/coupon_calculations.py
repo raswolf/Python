@@ -13,7 +13,7 @@ def calculate_order(price, cash_coupon, percent_coupon):
     payment = 0
     tax = price * .06
     shipping = 0
-    if price <= 10:
+    if price < 10:
         payment += price
         shipping = 5.95
         if cash_coupon == 5:
@@ -21,7 +21,7 @@ def calculate_order(price, cash_coupon, percent_coupon):
         elif cash_coupon == 10:
             payment -= 10
         payment -= payment * (percent_coupon/100)
-    return payment + tax + shipping
+    return max(payment, 0) + tax + shipping
 
 
 def main():
