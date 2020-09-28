@@ -26,3 +26,22 @@ while go_on:
 # print the list using a for loop
 for i in storage:
     print(i)
+
+# Please enter an integer from 1 to 100 or 0 to stop 8
+# Please enter an integer from 1 to 100 or 0 to stop 19
+# Please enter an integer from 1 to 100 or 0 to stop 73
+# Please enter an integer from 1 to 100 or 0 to stop 667
+# that is not a valid input
+# Please enter an integer from 1 to 100 or 0 to stop 67
+# Please enter an integer from 1 to 100 or 0 to stop -3
+# that is not a valid input
+# Please enter an integer from 1 to 100 or 0 to stop 03
+# Please enter an integer from 1 to 100 or 0 to stop 0
+# Thank you for filling the list
+# 8
+# 19
+# 73
+# 67
+# 03
+
+
