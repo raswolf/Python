@@ -9,7 +9,7 @@ The purpose of this program is to explore functions, parameters, and return valu
 
 def multiply_string(message, n):
     """Takes a string message and a number n and returns the string with message printed n times"""
-    pass
+    return message * n
 
 
 def main():
