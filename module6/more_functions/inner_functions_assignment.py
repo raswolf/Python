@@ -12,10 +12,10 @@ def measurements(m_list):
     :param m_list, a list containing the side measurements of the rectangle
     :returns a string describing the perimeter and area of the specified rectangle"""
     def area(a_list):
-        return float(a_list[0]) * float(a_list[1])
+        return float(a_list[0]) * float(a_list[len(a_list) - 1])
 
     def perimeter(a_list):
-        return (float(a_list[0]) + float(a_list[1])) * 2
+        return (float(a_list[0]) + float(a_list[len(a_list) - 1])) * 2
 
     description = 'Perimeter = ' + str(perimeter(m_list)) + ' Area = ' + str(area(m_list))
     return description
