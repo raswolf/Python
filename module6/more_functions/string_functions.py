@@ -8,15 +8,9 @@ The purpose of this program is to explore functions, parameters, and return valu
 
 
 def multiply_string(message, n):
-    """Takes a string message and a number n and returns the string with message printed n times"""
+    """Takes a string message and a number n and returns the string with message printed n times
+    :param message, the message to be repeated
+    :param n, the number of times to repeat the message
+    :returns a string made of the message repeated n times"""
     return message * n
 
-
-def main():
-    print('message = Python')
-    print('repeats = 5')
-    print(multiply_string('Python', 5))
-
-
-if __name__ == '__main__':
-    main()
