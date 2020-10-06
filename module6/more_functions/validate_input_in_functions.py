@@ -15,7 +15,7 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
     :param invalid_message optional, with default value 'Invalid test score, try again!'
     :returns a string formatted as 'Test name: ##'"""
     message = ''
-    if 0 <= test_score <= 100:
+    if 0 <= int(test_score) <= 100:
         message = test_name + ': ' + str(test_score)
     else:
         message = invalid_message
