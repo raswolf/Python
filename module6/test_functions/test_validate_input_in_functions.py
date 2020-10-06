@@ -15,7 +15,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_score_input_test_name(self):
         """checking that the function works with only the mandatory argument"""
-        self.assertEqual(score_input('Maggie'), 'Maggie: 00')
+        self.assertEqual(score_input('Maggie'), 'Maggie: 0')
 
     def test_score_input_test_score_valid(self):
         """checking that the function works with the mandatory argument and the score option:
