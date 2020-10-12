@@ -9,7 +9,7 @@ unit tests for basic_list_exception.py.
 
 import unittest
 from unittest.mock import patch
-import module7.fun_with_collections.basic_list as topic1
+import module7.fun_with_collections.basic_list_exception as topic1
 
 
 class TestList(unittest.TestCase):
@@ -17,20 +17,20 @@ class TestList(unittest.TestCase):
     def test_make_list(self, input):
         self.assertEqual(topic1.make_list(), [7, 7, 7])
 
-    @patch('fun_with_collections.topic1.get_input', return_value='ab')  # patch function for input
+    @patch('module7.fun_with_collections', return_value='ab')  # patch function for input
     def test_make_list_non_numeric(self, input):  # pass input
         with self.assertRaises(ValueError):  # this is familiar
             topic1.make_list()  # call the function!
 
-    @patch('fun_with_collections.topic1.get_input', return_value='-8')  # patch function for input
-    def test_make_list_below_range(self, input):  # pass input
-        with self.assertRaises(ValueError):  # this is familiar
-            topic1.make_list()  # call the function!
+    @patch('module7.fun_with_collections', return_value='-8')  # patch function for input
+    def test_make_list_below_range(self, input):
+        with self.assertRaises(ValueError):
+            topic1.make_list()
 
-    @patch('fun_with_collections.topic1.get_input', return_value='77')  # patch function for input
-    def test_make_list_above_range(self, input):  # pass input
-        with self.assertRaises(ValueError):  # this is familiar
-            topic1.make_list()  # call the function!
+    @patch('module7.fun_with_collections', return_value='77')  # patch function for input
+    def test_make_list_above_range(self, input):
+        with self.assertRaises(ValueError):
+            topic1.make_list()
 
 
 if __name__ == '__main__':

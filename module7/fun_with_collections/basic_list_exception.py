@@ -13,14 +13,16 @@ def make_list():
     itemlist = []
     for x in range(0, 3):
         item = get_input()
-        while not item.isdigit():
-            print('that is not a valid input')
-            item = get_input()
-        itemlist.append(int(item))
+        if not item.isdigit() or not 1 <= int(item) <= 50:
+            raise ValueError
+        else:
+            itemlist.append(int(item))
     return itemlist
 
 
 def get_input():
+    """Asks for a user input and returns it as a string
+    :returns a string made from the user input"""
     item = input('Please enter a number: ')
     return item
 
