@@ -18,13 +18,13 @@ def is_convertible_to_float(value):
 
 
 def weekly_pay(hours_worked, hourly_pay_rate):
-    """Prompts the user for name (string), hours worked (int), and
-    hourly pay rate (float) and prints a message"""
-    pass
+    """Uses hours worked that week (int), and
+    hourly pay rate (float) to calculate weekly pay"""
+    return hours_worked * hourly_pay_rate
 
 
 def hourly_employee_input():
-    """Prompts the user for name (string), hours worked (int), and
+    """Prompts the user for name (string), hours worked that week (int), and
     hourly pay rate (float) and prints a message"""
     hours_check = False
     rate_check = False
@@ -49,7 +49,7 @@ def hourly_employee_input():
             rate = input('please enter your hourly pay rate as a decimal: ')
         else:
             rate_check = True
-    print(name + ' receives a weekly pay of ' + weekly_pay(hours, rate))
+    print(name + ' receives a weekly pay of ' + str(weekly_pay(int(hours), float(rate))))
 
 
 def main():
