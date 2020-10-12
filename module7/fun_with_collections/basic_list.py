@@ -13,6 +13,9 @@ def make_list():
     itemlist = []
     for x in range(0, 3):
         item = get_input()
+        while not item.isdigit():
+            print('that is not a valid input')
+            item = get_input()
         itemlist.append(int(item))
     return itemlist
 
