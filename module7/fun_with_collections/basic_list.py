@@ -1,9 +1,9 @@
 """
 Program: basic_list.py
 Author: Rachael Wolf
-Last date modified: 10/11/2020
+Last date modified: 10/12/2020
 
-The purpose of this program is to
+The purpose of this program is to create a list of three items from user input
 """
 
 
@@ -21,6 +21,8 @@ def make_list():
 
 
 def get_input():
+    """Asks for a user input and returns it as a string
+    :returns a string made from the user input"""
     item = input('Please enter a number: ')
     return item
 
