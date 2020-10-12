@@ -8,8 +8,16 @@ The purpose of this program is to
 
 
 def make_list():
-    pass
+    """Asks for 3 user inputs and stores them in a list
+    :returns a list of the user inputs"""
+    itemlist = []
+    for x in range(0, 3):
+        item = get_input()
+        itemlist.append(int(item))
+    return itemlist
 
 
 def get_input():
-    pass
+    item = input('Please enter a number: ')
+    return item
+
