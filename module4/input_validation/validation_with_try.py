@@ -5,7 +5,8 @@ Last date modified: 09/21/2020
 
 The purpose of this program is to get a student's first and
 last names, their age, and three scores as input, then output
-the mame, age, and average score.
+the mame, age, and average score. This is an updated version
+of average_scores.py
 """
 
 

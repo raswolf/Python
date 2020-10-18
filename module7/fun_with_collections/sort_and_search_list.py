@@ -16,7 +16,7 @@ def sort_list(a_list):
 
 def search_list(item, a_list):
     """searches a list for a specified item and returns the index of that item
-    :returns the index of the search item, or -1 if the item is not in the list"""
+    :return the index of the search item, or -1 if the item is not in the list"""
     for n in a_list:
         if n == item:
             return a_list.index(n)
