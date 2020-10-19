@@ -12,10 +12,10 @@ of average_scores.py
 
 def get_test_scores():
     """Creates an empty dictionary
-    Prompts the user to input the number of test scores, stores in num_scores
-    uses a loop to get each of the num_scores tests
-    Prompts the user to input a test score, stores in score. (Validate the input!)
-    Adds score to scores_dict, updating the dictionary"""
+    Prompts the user to input the number of test scores
+    Prompts the user to input the scores, one by one
+    from these inputs, creates a dictionary of scores
+    :returns a dictionary of scores"""
     scores_dict = dict()
     num_scores = input("How many scores? ")
     while not num_scores.isdigit() or int(num_scores) < 1:
