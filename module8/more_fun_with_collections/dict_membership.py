@@ -14,4 +14,8 @@ def in_dict(q_dict, element):
     :param q_dict a dictionary to be tested
     :param element a value to be tested
     :returns True if the element is in the set, false otherwise"""
+    for k in q_dict:
+        if q_dict[k] == element:
+            return True
+    return False
     pass
