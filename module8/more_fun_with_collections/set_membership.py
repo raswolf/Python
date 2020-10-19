@@ -1,9 +1,10 @@
 """
-Program: basic_list.py
+Program: set_membership.py
 Author: Rachael Wolf
-Last date modified: 10/12/2020
+Last date modified: 10/19/2020
 
-The purpose of this program is to create a list of three items from user input
+The purpose of this program is to contain a function in_set
+which tests whether a particular element is in a given set
 """
 
 
