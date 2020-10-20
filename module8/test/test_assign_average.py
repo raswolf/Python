@@ -8,27 +8,27 @@ unit tests for dict_membership.py.
 """
 
 import unittest
-import module8.more_fun_with_collections.dict_membership as topic1
+import module8.more_fun_with_collections.assign_average as topic1
 
 
 class TestList(unittest.TestCase):
     def test_switch_average_A(self):
-        self.assertEqual(100 >= topic1.in_dict('A') >= 90, True)
+        self.assertTrue(100 >= int(topic1.switch_average('A')) >= 90)
 
     def test_switch_average_B(self):
-        self.assertEqual(90 > topic1.in_dict('B') >= 80, True)
+        self.assertTrue(90 > int(topic1.switch_average('B')) >= 80)
 
     def test_switch_average_C(self):
-        self.assertEqual(80 > topic1.in_dict('C') >= 70, True)
+        self.assertTrue(80 > int(topic1.switch_average('C')) >= 70)
 
     def test_switch_average_D(self):
-        self.assertEqual(70 > topic1.in_dict('D') >= 50, True)
+        self.assertTrue(70 > int(topic1.switch_average('D')) >= 50)
 
     def test_switch_average_F(self):
-        self.assertEqual(50 > topic1.in_dict('F'), True)
+        self.assertTrue(50 > int(topic1.switch_average('F')) >= 0)
 
     def test_switch_average_non_key(self):
-        self.assertRaises(topic1.in_dict('G'), ValueError)
+        self.assertEqual(topic1.switch_average('G'), 'Invalid Grade')
 
 
 if __name__ == '__main__':
