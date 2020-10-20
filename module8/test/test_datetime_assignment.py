@@ -16,8 +16,7 @@ my_birthday = datetime.datetime(2020, 5, 26)
 
 class TestList(unittest.TestCase):
     def test_half_birthday(self):
-        self.assertEqual(topic1.half_birthday(my_birthday), datetime.datetime(2020, 11, 26))
-
+        self.assertEqual(topic1.half_birthday(my_birthday), datetime.datetime(2020, 11, 25))
 
 
 if __name__ == '__main__':

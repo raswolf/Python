@@ -13,4 +13,6 @@ def half_birthday(birthday):
     """Takes a letter grade and returns a corresponding number grade
     :param birthday the date of a person's most recent birthday
     :returns the date of that person's subsequent half-birthday"""
-    pass
+    next_date = birthday + datetime.timedelta(days=183)
+    return next_date
+
