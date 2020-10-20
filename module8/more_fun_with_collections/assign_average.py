@@ -4,12 +4,13 @@ Author: Rachael Wolf
 Last date modified: 10/19/2020
 
 The purpose of this program is to contain a function switch_average.
-The instructions were not clear on exactly what this function is supposed to do
-I am writing it under the assumption I am meant to decide exactly what the different
+In the instructions, it is not clear to me exactly what this function is supposed to do
+I am writing my code under the assumption I am meant to decide exactly what the different
 cases are meant to be and what should be done in each case.
+This program produces random test scores, as strings convertible to integers, which are within
+the range indicated by the user-provided letter grade.
 """
 
-from module8.more_fun_with_collections.dict_average_scores import get_average_scores
 import random
 
 
@@ -42,7 +43,6 @@ def switch_average(score_key):
     """Takes a letter grade and returns a corresponding number grade
     :param score_key a letter grade A, B, C, D, or F
     :returns a string denoting a score that would receive the provided grade"""
-    pass
     switcher = {'A': get_A,
                 'B': get_B,
                 'C': get_C,
