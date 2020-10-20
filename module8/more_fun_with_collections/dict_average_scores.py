@@ -33,13 +33,22 @@ def get_test_scores():
 def average_scores(score_dict):
     """accepts a dictionary of scores and prints the average score report as
      a formatted string"""
-    pass
     score_sum = 0.0
     print('Result:', end=' ')
     for n in range(1, len(score_dict) + 1):
         score_sum += score_dict[str(n)]
     print('current average {0:.2f}'.format(score_sum/len(score_dict)))
     # return
+
+
+def get_average_scores(score_dict):
+    """accepts a dictionary of scores and returns the average score as
+     a float"""
+    score_sum = 0.0
+    for n in range(1, len(score_dict) + 1):
+        score_sum += score_dict[str(n)]
+    # print('current average {0:.2f}'.format(score_sum/len(score_dict)))
+    return score_sum/len(score_dict)
 
 
 def main():
