@@ -1,9 +1,10 @@
 """
-Program: assign_average.py
+Program: datetime_assignment.py
 Author: Rachael Wolf
 Last date modified: 10/19/2020
 
-The purpose of this program is to contain a function half_birthday()
+The purpose of this program is to contain a function half_birthday() which calculates
+a person's half-birthday based on their most recent birthday
 """
 
 import datetime

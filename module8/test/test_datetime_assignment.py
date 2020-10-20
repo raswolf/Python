@@ -1,10 +1,10 @@
 """
-Program: test_dict_membership.py
+Program: test_datetime_assignment.py
 Author: Rachael Wolf
 Last date modified: 10/19/2020
 
 The purpose of this program is to contain
-unit tests for dict_membership.py.
+unit tests for datetime_assignment.py.
 """
 
 import unittest
