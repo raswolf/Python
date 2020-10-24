@@ -1,0 +1,8 @@
+['name = Jay Luck', '56', '87', '71']
+['name = Ashley Graham', '83', '67', '53']
+['name = Paul Morre', '74', '82', '64']
+['name = Lisa Hart', '85', '56', '74']
+['name = Jay Luck', '56', '85', '43']
+['name = Ashley Graham', '82', '51', '93']
+['name = Paul Morre', '82', '57', '68']
+['name = Lisa Hart', '91', '61', '75']
