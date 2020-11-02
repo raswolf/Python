@@ -47,7 +47,7 @@ class TestList(unittest.TestCase):
 
     def test_object_not_created_error_gpa(self):
         with self.assertRaises(ValueError):
-            p = sdt.Student('Hart', 'Alice', 'Statistics', '2.8')
+            p = sdt.Student('Hart', 'Alice', 'Statistics', 'abc')
 
 
 if __name__ == '__main__':

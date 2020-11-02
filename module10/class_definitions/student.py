@@ -1,9 +1,16 @@
 class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):
+        def is_convertible_to_float(value):
+            """Tests whether a value is convertible to a float"""
+            try:
+                float(value)
+                return True
+            except:
+                return False
         name_characters = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz '-")
         if not (name_characters.issuperset(lname) and name_characters.issuperset(fname)
-                and name_characters.issuperset(major)):
+                and name_characters.issuperset(major) and is_convertible_to_float(gpa)):
             raise ValueError
         self.last_name = lname
         self.first_name = fname
