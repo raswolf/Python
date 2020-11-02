@@ -24,14 +24,14 @@ class TestList(unittest.TestCase):
         self.assertEqual(self.student.major, 'Horticulture')
 
     def test_object_created_all_attributes(self):
-        self.assertTrue(False)
-
-    def test_student_str(self):
         student1 = sdt.Student('Lisa', 'Briggs', 'Political Science', 3.28)
         assert student1.last_name == 'Lisa'
         assert student1.first_name == 'Briggs'
         assert student1.major == 'Political Science'
         assert student1.gpa == 3.28
+
+    def test_student_str(self):
+        self.assertTrue(False)
 
     def test_object_not_created_error_last_name(self):
         with self.assertRaises(ValueError):
@@ -42,7 +42,8 @@ class TestList(unittest.TestCase):
             p = sdt.Student('Hart', '1234', 'Statistics')
 
     def test_object_not_created_error_major(self):
-        self.assertTrue(False)
+        with self.assertRaises(ValueError):
+            p = sdt.Student('Hart', 'Alice', '1234')
 
     def test_object_not_created_error_gpa(self):
         self.assertTrue(False)
