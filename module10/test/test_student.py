@@ -31,7 +31,7 @@ class TestList(unittest.TestCase):
         assert student1.gpa == 3.28
 
     def test_student_str(self):
-        self.assertTrue(False)
+        self.assertEqual(str(self.student), 'Luck, Jay has major Horticulture with gpa: 0.0')
 
     def test_object_not_created_error_last_name(self):
         with self.assertRaises(ValueError):
