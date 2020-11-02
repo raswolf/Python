@@ -38,7 +38,8 @@ class TestList(unittest.TestCase):
             p = sdt.Student('123', 'Alice', 'Statistics')
 
     def test_object_not_created_error_first_name(self):
-        self.assertTrue(False)
+        with self.assertRaises(ValueError):
+            p = sdt.Student('Hart', '1234', 'Statistics')
 
     def test_object_not_created_error_major(self):
         self.assertTrue(False)
