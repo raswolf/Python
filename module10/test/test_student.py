@@ -27,7 +27,11 @@ class TestList(unittest.TestCase):
         self.assertTrue(False)
 
     def test_student_str(self):
-        self.assertTrue(False)
+        student1 = sdt.Student('Lisa', 'Briggs', 'Political Science', 3.28)
+        assert student1.last_name == 'Lisa'
+        assert student1.first_name == 'Briggs'
+        assert student1.major == 'Political Science'
+        assert student1.gpa == 3.28
 
     def test_object_not_created_error_last_name(self):
         self.assertTrue(False)
