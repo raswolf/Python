@@ -8,12 +8,20 @@ unit tests for student.py.
 """
 
 import unittest
-import module10.class_definitions.student as topic1
+import module10.class_definitions.student as sdt
 
 
 class TestList(unittest.TestCase):
+    def setUp(self):
+        self.student = sdt.Student('Luck', 'Jay', 'Horticulture')
+
+    def tearDown(self):
+        del self.student
+
     def test_object_created_required_attributes(self):
-        self.assertTrue(False)
+        self.assertEqual(self.student.last_name, 'Luck')
+        self.assertEqual(self.student.first_name, 'Jay')
+        self.assertEqual(self.student.major, 'Horticulture')
 
     def test_object_created_all_attributes(self):
         self.assertTrue(False)
