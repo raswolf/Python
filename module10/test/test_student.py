@@ -34,7 +34,8 @@ class TestList(unittest.TestCase):
         assert student1.gpa == 3.28
 
     def test_object_not_created_error_last_name(self):
-        self.assertTrue(False)
+        with self.assertRaises(ValueError):
+            p = sdt.Student('123', 'Alice', 'Statistics')
 
     def test_object_not_created_error_first_name(self):
         self.assertTrue(False)
