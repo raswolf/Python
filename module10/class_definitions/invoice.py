@@ -46,8 +46,9 @@ class Invoice:
         for k in self.items_with_price:
             price += self.items_with_price[k]
             print(str(k) + ': ' + str(self.items_with_price[k]))
-        total = price * (tax + 1.0)
-        print('Total: {0:.2f}'.format(total))
+        tax = price * tax
+        print('Tax: {0:.2f}'.format(tax))
+        print('Total: {0:.2f}'.format(price + tax))
 
     def display(self):
         """returns a more comprehensive string of the Invoice object"""
