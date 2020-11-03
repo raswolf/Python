@@ -18,11 +18,11 @@ class Invoice:
             self.items_with_price = {'none': 0.00}
         else:
             self.items_with_price = items_with_price
-        if isinstance(self.customer_id, int):
+        if isinstance(customer_id, int):
             self.customer_id = int(customer_id)
         else:
             raise AttributeError('AttributeError: \'Invoice\' object has no attribute \'cid\'')
-        if isinstance(self.invoice_id, int):
+        if isinstance(invoice_id, int):
             self.invoice_id = int(invoice_id)
         else:
             raise AttributeError('AttributeError: \'Invoice\' object has no attribute \'iid\'')
@@ -42,7 +42,12 @@ class Invoice:
     def create_invoice(self, tax):
         """prints each item and price, then a total with tax calculated
         :param tax the tax rate to be used in calculation.  should be a decimal less than 1"""
-        pass
+        price = 0.0
+        for k in self.items_with_price:
+            price += self.items_with_price[k]
+            print(str(k) + ': ' + str(self.items_with_price[k]))
+        total = price * (tax + 1.0)
+        print('Total: {0:.2f}'.format(total))
 
     def display(self):
         """returns a more comprehensive string of the Invoice object"""
@@ -61,3 +66,8 @@ class Invoice:
 
 
 # Drive
+inv = Invoice(12, 451, 'Matthew', 'Ruiz', '(614) 544 9823', '519 Grant St \nEllis, New Jersey')   # call the constructor
+inv.add_item('iPad', 799.99)
+inv.add_item('Surface', 999.99)
+inv.create_invoice(.07)
+del inv
