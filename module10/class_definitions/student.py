@@ -1,3 +1,13 @@
+"""
+Program: student.py
+Author: Rachael Wolf
+Last date modified: 11/1/2020
+
+This program contains a Class called Student and a function relating to it
+The function included is: __str__()
+"""
+
+
 class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):
