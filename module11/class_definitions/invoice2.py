@@ -65,10 +65,11 @@ class Invoice:
 
 
 # Drive
-cust = c.Customer(451, 'Matthew', 'Ruiz', '(614) 544 9823', '519 Grant St \nEllis, New Jersey')
-inv = Invoice(12, cust)   # call the constructor
-inv.add_item('iPad', 799.99)
-inv.add_item('Surface', 999.99)
+captain_mal = c.Customer(1, 'Reynolds', 'Mel', 'No phones', 'Firefly, somewhere in the verse')
+invoice = Invoice(1, captain_mal)
+invoice.add_item('iPad', 799.99)
+invoice.add_item('Surface', 999.99)
 print()
-inv.create_invoice(.07)
-del inv
+invoice.create_invoice(.07)
+del captain_mal
+del invoice
