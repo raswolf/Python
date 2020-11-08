@@ -1,7 +1,7 @@
 """
 Program: invoice2.py
 Author: Rachael Wolf
-Last date modified: 11/1/2020
+Last date modified: 11/8/2020
 
 This program contains a Class called Invoice and some functions relating to it
 The functions included are: add_item(), create_invoice(), display(), str(), and repr()

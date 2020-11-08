@@ -1,5 +1,5 @@
 """
-Program: invoice2.py
+Program: invoice.py
 Author: Rachael Wolf
 Last date modified: 11/1/2020
 

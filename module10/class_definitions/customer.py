@@ -1,5 +1,5 @@
 """
-Program: customer2.py
+Program: customer.py
 Author: Rachael Wolf
 Last date modified: 11/1/2020
 
