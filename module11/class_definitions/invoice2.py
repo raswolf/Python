@@ -6,30 +6,27 @@ Last date modified: 11/1/2020
 This program contains a Class called Invoice and some functions relating to it
 The functions included are: add_item(), create_invoice(), display(), str(), and repr()
 """
+import module10.class_definitions.customer as c
 
 
 class Invoice:
-    """A class representing an invoice, with an invoice ID, information regarding the customer, and a
+    """A class representing an invoice, with an invoice ID, a Customer object, and a
     dictionary of item names and prices"""
 
-    def __init__(self, invoice_id, customer_id, name, surname, phone_number, address, items_with_price=None):
+    def __init__(self, invoice_id, customer, items_with_price=None):
 
         if items_with_price is None:
             self.items_with_price = {'none': 0.00}
         else:
             self.items_with_price = items_with_price
-        if isinstance(customer_id, int):
-            self.customer_id = int(customer_id)
+        if isinstance(customer, c.Customer):
+            self.customer = customer
         else:
-            raise AttributeError('AttributeError: \'Invoice\' object has no attribute \'cid\'')
+            raise AttributeError('AttributeError: \'Invoice\' object has no attribute \'customer\'')
         if isinstance(invoice_id, int):
             self.invoice_id = int(invoice_id)
         else:
             raise AttributeError('AttributeError: \'Invoice\' object has no attribute \'iid\'')
-        self.first_name = name
-        self.last_name = surname
-        self.address = address
-        self.phone_number = phone_number
 
     def add_item(self, item_name, item_price):
         """adds an item to items_with_price dictionary
@@ -52,23 +49,26 @@ class Invoice:
 
     def display(self):
         """returns a more comprehensive string of the Invoice object"""
-        full_name = str(self.first_name) + " " + str(self.last_name)
-        return str(self.customer_id) + "\n" + full_name + "\n" + str(self.address) + "\n" + self.phone_number
+        full_name = str(self.customer.first_name) + " " + str(self.customer.last_name)
+        return (str(self.customer.customer_id) + "\n" + full_name + "\n" + str(self.customer.address) + "\n" +
+               self.customer.phone_number)
 
     def str(self):
         """returns a string of the Invoice object. same as repr()"""
-        i_string = self.first_name + ' ' + self.last_name + ', ' + self.phone_number
+        i_string = self.customer.first_name + ' ' + self.customer.last_name + ', ' + self.customer.phone_number
         return i_string
 
     def repr(self):
         """returns a string of the Invoice object. same as str()"""
-        i_string = self.first_name + ' ' + self.last_name + ', ' + self.phone_number
+        i_string = self.customer.first_name + ' ' + self.customer.last_name + ', ' + self.customer.phone_number
         return i_string
 
 
 # Drive
-inv = Invoice(12, 451, 'Matthew', 'Ruiz', '(614) 544 9823', '519 Grant St \nEllis, New Jersey')   # call the constructor
+cust = c.Customer(451, 'Matthew', 'Ruiz', '(614) 544 9823', '519 Grant St \nEllis, New Jersey')
+inv = Invoice(12, cust)   # call the constructor
 inv.add_item('iPad', 799.99)
 inv.add_item('Surface', 999.99)
+print()
 inv.create_invoice(.07)
 del inv

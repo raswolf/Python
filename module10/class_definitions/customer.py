@@ -1,5 +1,5 @@
 """
-Program: customer.py
+Program: customer2.py
 Author: Rachael Wolf
 Last date modified: 11/1/2020
 
@@ -13,7 +13,7 @@ class Customer:
 
     def __init__(self, customer_id, name, surname, phone_number, address):
 
-        if isinstance(self.customer_id, int):
+        if isinstance(customer_id, int):
             self.customer_id = int(customer_id)
         else:
             raise AttributeError('AttributeError: \'Customer\' object has no attribute \'cid\'')
@@ -52,8 +52,7 @@ class Customer:
 customer1 = Customer(25543, 'Matthew', 'Ruiz', '(614) 544 9823',
                      '519 Grant St \nEllis, New Jersey')   # call the constructor
 print(customer1.display())  # display returns a str, so print the information
-customer2 = Customer('goose', 'Laura', 'Maduro', '(822) 282 5743'
-                     '114 Coral Ave \n Hark, New Jersey')
-print(customer2.display())  # display returns a str, so print the information
+# customer2 = Customer('goose', 'Laura', 'Maduro', '(822) 282 5743', '114 Coral Ave \n Hark, New Jersey')
+# print(customer2.display())  # display returns a str, so print the information
 del customer1
-del customer2
+# del customer2
