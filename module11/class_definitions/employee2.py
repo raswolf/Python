@@ -3,8 +3,9 @@ Program: employee2.py
 Author: Rachael Wolf
 Last date modified: 11/9/2020
 
-This program contains a Class called Employee and some functions relating to it
-The functions included are: set_last_name(), set_first_name(), display(), str(), and repr()
+This program contains a base Class called Employee and two subclasses called SalariedEmployee and HourlyEmployee
+Employee includes functions: set_last_name(), set_first_name(), display(), str(), and repr()
+SalariedEmployee and HourlyEmployee each add function: give_raise() and override Employee function display()
 """
 import my_stuff.my_tools as t
 import datetime
@@ -13,6 +14,15 @@ import datetime
 class Employee:
     """A class representing an employee, with a first and last name, contact information, and employment information"""
     def __init__(self, name, surname, address, phone_number):
+        name_characters = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz '-")
+        num_characters = set("1234567890 -()")
+        address_characters = set(name_characters | num_characters | set(",.\n"))
+        if not (name_characters.issuperset(name) and name_characters.issuperset(surname)):
+            raise ValueError
+        if not (num_characters.issuperset(phone_number)):
+            raise ValueError
+        if not (address_characters.issuperset(address)):
+            raise ValueError
         self.first_name = name
         self.last_name = surname
         self.address = address
@@ -53,6 +63,8 @@ class SalariedEmployee(Employee):
         self.salary = salary
 
     def give_raise(self, new_salary):
+        """Alters the salary value of the SalariedEmployee object
+        :param new_salary the updated salary for the SalariedEmployee"""
         if not t.is_convertible_to_float(new_salary) or (new_salary < self.salary):
             raise ValueError
         else:
@@ -74,6 +86,8 @@ class HourlyEmployee(Employee):
         self.hourly_pay = hourly_pay
 
     def give_raise(self, new_pay):
+        """Alters the hourly_pay value of the HourlyEmployee object
+        :param new_pay the updated hourly pay for the HourlyEmployee"""
         if not t.is_convertible_to_float(new_pay) or (new_pay < self.hourly_pay):
             raise ValueError
         else:
