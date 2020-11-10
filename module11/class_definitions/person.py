@@ -15,15 +15,18 @@ class Address:
         if not (name_characters.issuperset(st_name) and name_characters.issuperset(st_type)
                 and name_characters.issuperset(city) and name_characters.issuperset(state)):
             raise ValueError
-        if not (num_characters.issuperset(st_number) and num_characters.issuperset(zip)):
+        if not (num_characters.issuperset(str(st_number)) and num_characters.issuperset(str(zip))):
             raise ValueError
-        self.street_number = st_number
+        self.street_number = str(st_number)
         self.street_name = st_name
         self.street_type = st_type
         self.apartment_number = apt_num
         self.city = city
         self.state = state
         self.zip_code = zip
+
+    def __str__(self):
+        return self.street_number + ' ' + self.street_name + '\n' + self.city + ', ' + self.state
 
     def display(self):
         return(self.street_number + ' ' + self.street_name + ' ' + self.street_type + ' ' + self.apartment_number
@@ -46,4 +49,4 @@ class Person:
         if self.address is None:
             return str(self.last_name) + ", " + str(self.first_name)
         else:
-            return str(self.last_name) + ", " + str(self.first_name) + '\n' + self.address.display()
+            return str(self.last_name) + ", " + str(self.first_name) + '\n' + str(self.address)

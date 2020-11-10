@@ -101,18 +101,18 @@ class HourlyEmployee(Employee):
 
 
 # Drive
-me_salaried = SalariedEmployee('Rachael', 'Wolf', '555 Auburn Rd \n Fake, IA', '(319)-382-3100',
-                               datetime.date.today(), 40000)
-print(me_salaried.display())
-me_salaried.give_raise(45000)
-print(me_salaried.display())
-del me_salaried
+# me_salaried = SalariedEmployee('Rachael', 'Wolf', '555 Auburn Rd \n Fake, IA', '(319)-382-3100',
+#                               datetime.date.today(), 40000)
+# print(me_salaried.display())
+# me_salaried.give_raise(45000)
+# print(me_salaried.display())
+# del me_salaried
 
-print()
+# print()
 
-me_hourly = HourlyEmployee('Rachael', 'Wolf', '555 Auburn Rd \n Fake, IA', '(319)-382-3100',
-                           datetime.date.today(), 10.00)
-print(me_hourly.display())
-me_hourly.give_raise(12.00)
-print(me_hourly.display())
-del me_hourly
+# me_hourly = HourlyEmployee('Rachael', 'Wolf', '555 Auburn Rd \n Fake, IA', '(319)-382-3100',
+#                           datetime.date.today(), 10.00)
+# print(me_hourly.display())
+# me_hourly.give_raise(12.00)
+# print(me_hourly.display())
+# del me_hourly
